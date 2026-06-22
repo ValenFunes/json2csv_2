@@ -20,6 +20,3 @@ htmlcov/
 # Windows
 desktop.ini
 Thumbs.db
-
-# Carpeta mal creada
-{src/
