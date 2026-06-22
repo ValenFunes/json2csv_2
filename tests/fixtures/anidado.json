@@ -1,0 +1,4 @@
+[
+  {"id": 1, "usuario": {"nombre": "Ana", "email": "ana@mail.com"}, "puntos": 150},
+  {"id": 2, "usuario": {"nombre": "Carlos", "email": "carlos@mail.com"}, "puntos": 200}
+]

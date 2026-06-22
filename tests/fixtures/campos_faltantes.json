@@ -1,0 +1,5 @@
+[
+  {"nombre": "Ana", "edad": 28, "ciudad": "Buenos Aires"},
+  {"nombre": "Carlos", "edad": 35},
+  {"nombre": "María", "ciudad": "Rosario", "telefono": "0351-1234567"}
+]

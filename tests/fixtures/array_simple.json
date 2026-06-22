@@ -1,0 +1,5 @@
+[
+  {"nombre": "Ana García", "edad": 28, "ciudad": "Buenos Aires", "activo": true},
+  {"nombre": "Carlos López", "edad": 35, "ciudad": "Córdoba", "activo": false},
+  {"nombre": "María Fernández", "edad": 22, "ciudad": "Rosario", "activo": true}
+]

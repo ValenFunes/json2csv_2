@@ -1,0 +1,4 @@
+[
+  {"nombre": "Ana", "hobbies": ["lectura", "música"], "nota": 9.5},
+  {"nombre": "Carlos", "hobbies": ["fútbol", "cine", "cocina"], "nota": 8.0}
+]
