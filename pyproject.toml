@@ -1,0 +1,91 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "json2csv"
+version = "0.1.0"
+description = "Convert JSON files to CSV format with robust exception handling."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Valentina Funes" }]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.scripts]
+json2csv = "json2csv.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+    "black>=24.4",
+    "mypy>=1.10",
+    "pyright>=1.1",
+    "bandit>=1.7",
+    "pdoc>=14.0",
+    "pep257>=0.7",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# ---------------------------------------------------------------------------
+# ruff
+# ---------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "D", "UP", "B", "C90"]
+ignore = ["D105", "D107"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+# ---------------------------------------------------------------------------
+# black
+# ---------------------------------------------------------------------------
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+# ---------------------------------------------------------------------------
+# mypy
+# ---------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+exclude = ["tests/"]
+
+# ---------------------------------------------------------------------------
+# pytest
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=json2csv --cov-report=term-missing --cov-fail-under=85"
+
+[tool.coverage.run]
+source = ["src/json2csv"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]
+
+# ---------------------------------------------------------------------------
+# bandit
+# ---------------------------------------------------------------------------
+[tool.bandit]
+targets = ["src/json2csv"]
+skips = []

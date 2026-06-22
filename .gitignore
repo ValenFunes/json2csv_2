@@ -1,0 +1,25 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+*.egg
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Ruff / Mypy cache
+.ruff_cache/
+.mypy_cache/
+
+# Windows
+desktop.ini
+Thumbs.db
+
+# Carpeta mal creada
+{src/

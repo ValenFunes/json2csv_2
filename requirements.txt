@@ -1,0 +1,12 @@
+# Runtime dependencies (none — stdlib only)
+
+# Development / CI dependencies
+pytest>=7.4
+pytest-cov>=4.1
+ruff>=0.4
+black>=24.4
+mypy>=1.10
+pyright>=1.1.0
+bandit[toml]>=1.7
+pdoc>=14.0
+pydocstyle>=6.3
